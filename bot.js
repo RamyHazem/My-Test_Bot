@@ -1,12 +1,9 @@
 const { Client, Partials, Collection, Routes } = require("discord.js");
 const { User, Message, GuildMember, ThreadMember, Channel } = Partials;
 const mongoose = require("mongoose");
-const fs = require("node:fs");
-const path = require("node:path");
-const { REST } = require("@discordjs/rest");
-const { token, clientID, guildID } = require("./config.json");
+const { token } = require("./config.json");
 const slashHandler = require("./Handlers/slashHandler");
-const deployCommands = require("./Handlers/deploy-commands");
+const deployGuild = require("./Handlers/deploy-guild");
 
 const client = new Client({
   intents: 131071,
@@ -29,7 +26,7 @@ client.on("ready", async () => {
 
 client.commands = new Collection();
 slashHandler(client);
-deployCommands();
+deployGuild();
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
