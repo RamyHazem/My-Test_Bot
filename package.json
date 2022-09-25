@@ -3,5 +3,25 @@
     "@discordjs/rest": "^1.1.0",
     "discord.js": "^14.3.0",
     "mongoose": "^6.6.0"
-  }
+  },
+  "name": "tfm-v14",
+  "description": "Welcome to my V14 Test Discord Bot.",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node bot.js",
+    "devStart": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SynchronousRamy/My-Test-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SynchronousRamy/My-Test-Bot/issues"
+  },
+  "homepage": "https://github.com/SynchronousRamy/My-Test-Bot#readme"
 }
